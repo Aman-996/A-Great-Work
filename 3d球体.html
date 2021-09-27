@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+        @keyframes ball{
+            0%{
+                transform: rotateZ(15deg) rotateX(15deg) rotateY(15deg);
+            }
+            100%{
+                transform: rotateZ(360deg) rotateX(360deg) rotateY(360deg);
+            }
+        }
+        body{
+            background-color: #000;
+        }
+
+        .wrap{
+            width: 500px;
+            height: 500px;
+            /* border:5px solid black; */
+
+            position: relative;
+            transform: rotateZ(360deg) rotateX(360deg) rotateY(360deg);
+            transform-style: preserve-3d;
+
+
+            /* 声明@keyframes要操作的规则的名称。 */
+            animation-name: ball;
+            /* 一个动画完成一个循环所需的时间长度。 */
+            animation-duration: 5s;
+            /* 建立预设的加速度曲线 */
+            animation-timing-function: ease-in;
+            /* 动画应该执行的次数 */
+            animation-iteration-count: infinite;
+            /* 设置循环后动画的方向 */
+            animation-direction: alternate-reverse;
+        }
+        .wrap div{
+            width: 500px;
+            height: 500px;
+            border:3px solid pink;
+
+            border-radius: 50%;
+            position: absolute;
+            top:0;
+            left: 0;
+
+            /* 增加阴影：x y 模糊程度 扩散范围 阴影颜色 [inset内阴影] */
+            box-shadow: 0 0 5px 5px pink;
+        }
+        .wrap .item1{
+            transform: rotateX(45deg);
+        }
+        .wrap .item2{
+            transform: rotateX(90deg);
+        }
+        .wrap .item3{
+            transform: rotateX(135deg);
+        }
+        .wrap .item4{
+            transform: rotateX(180deg);
+        }
+        .wrap .item5{
+            transform: rotateX(225deg);
+        }
+        .wrap .item6{
+            transform: rotateX(270deg);
+        }
+        .wrap .item7{
+            transform: rotateX(315deg);
+        }
+        .wrap .item8{
+            transform: rotateX(360deg);
+        }
+
+        .wrap .item9{
+            transform: rotateY(45deg);
+        }
+        .wrap .item10{
+            transform: rotateY(90deg);
+        }
+        .wrap .item11{
+            transform: rotateY(135deg);
+        }
+        .wrap .item12{
+            transform: rotateY(180deg);
+        }
+        .wrap .item13{
+            transform: rotateY(225deg);
+        }
+        .wrap .item14{
+            transform: rotateY(270deg);
+        }
+        .wrap .item15{
+            transform: rotateY(315deg);
+        }
+        .wrap .item16{
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+        <div class="item7"></div>
+        <div class="item8"></div>
+        <div class="item9"></div>
+        <div class="item10"></div>
+        <div class="item11"></div>
+        <div class="item12"></div>
+        <div class="item13"></div>
+        <div class="item14"></div>
+        <div class="item15"></div>
+        <div class="item16"></div>
+    </div>
+</body>
+</html>
